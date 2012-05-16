@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation, :avatar, :born_on, :female
   has_secure_password
+  has_many :microposts, dependent: :destroy
 
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }#,
                     #:url  => "images/:attachment/:id/:style/:filename",
