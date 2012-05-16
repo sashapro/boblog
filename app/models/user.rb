@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :email, :password, :password_confirmation, :avatar
+  attr_accessible :name, :email, :password, :password_confirmation, :avatar, :born_on, :female
   has_secure_password
 
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }#,
@@ -19,6 +19,8 @@ class User < ActiveRecord::Base
   validates_attachment :avatar,
                        :content_type => { :content_type => ['image/jpeg', 'image/png', 'image/jpg'] },
                        :size => { :less_than => 3.megabytes }
+
+
 
   private
 
