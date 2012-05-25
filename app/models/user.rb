@@ -3,7 +3,9 @@ class User < ActiveRecord::Base
   has_secure_password
   has_many :microposts, dependent: :destroy
 
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }#,
+  has_attached_file :avatar,
+                    :default_url => "/assets/missing_:style.jpg" ,
+                    :styles => { :medium => "300x300>", :thumb => "100x100>" }
                     #:url  => "images/:attachment/:id/:style/:filename",
                     #:path => ":rails_root/app/assets/images/:attachment/:id/:style/:filename"
 
@@ -22,7 +24,10 @@ class User < ActiveRecord::Base
                        :size => { :less_than => 3.megabytes }
 
 
-
+  def feed
+    # This is preliminary. See "Following users" for the full implementation.
+    Micropost.where("user_id = ?", id)
+  end
   private
 
   def create_remember_token
