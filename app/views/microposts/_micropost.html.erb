@@ -9,9 +9,7 @@
                   title:   micropost.content %>
   <% end %>
   <% if micropost.comments.any? %>
-      <ol class="comments">
-        <%= render @comments %>
-      </ol>
+
   <% end %>
   <%= render 'shared/comment_form' %>
 </li>
