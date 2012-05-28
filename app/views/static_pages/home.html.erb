@@ -5,6 +5,9 @@
           <%= render 'shared/user_info' %>
         </section>
         <section>
+          <%= render 'shared/stats' %>
+        </section>
+        <section>
           <%= render 'shared/micropost_form' %>
         </section>
       </aside>
@@ -15,12 +18,12 @@
     </div>
 <% else %>
 <div class="center hero-unit">
-  <h1>Welcome to the Blog</h1>
+  <h1>Welcome to the BoBlog</h1>
 
   <h2>
     This is the home page for the
     Ruby on Rails
-    Blog.
+    BoBlog.
   </h2>
 
   <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>

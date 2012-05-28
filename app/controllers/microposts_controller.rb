@@ -21,6 +21,11 @@ class MicropostsController < ApplicationController
     redirect_to current_user
   end
 
+  def self.from_users_followed_by(user)
+    followed_user_ids = user.followed_user_ids
+    where("user_id IN (?) OR user_id = ?", followed_user_ids, user)
+  end
+
   private
   def correct_user
     @micropost = current_user.microposts.find_by_id(params[:id])
