@@ -10,8 +10,8 @@
   <% end %>
   <% if micropost.comments.any? %>
       <ol class="comments">
-        <%= render @comments %>
+        <%= render :partial => 'comments/form', :comments => micropost.comments %>
       </ol>
   <% end %>
-  <%= render 'shared/comment_form' %>
+  <%= render 'shared/comment_form', :micropost => micropost %>
 </li>
