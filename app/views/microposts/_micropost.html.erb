@@ -4,12 +4,14 @@
     Posted <%= time_ago_in_words(micropost.created_at) %> ago.
   </span>
   <% if current_user?(micropost.user) %>
-      <%= link_to "delete", micropost, method:  :delete,
+      <%= link_to "delete", micropost, method: :delete,
                   confirm: "You sure?",
-                  title:   micropost.content %>
+                  title: micropost.content %>
   <% end %>
   <% if micropost.comments.any? %>
-
+      <ol class="comments">
+        <%= render 'comments/comments', :comments => micropost.comments %>
+      </ol>
   <% end %>
-  <%= render 'shared/comment_form' %>
+  <%= render 'comments/form', :micropost => micropost %>
 </li>

@@ -1,3 +1,4 @@
+<% for comment in comments %>
 <li>
   <span class="comment"><%= comment.content %></span>
   <span class="timestamp">
@@ -9,3 +10,4 @@
                   title:   comment.content %>
   <% end %>
 </li>
+<% end %>
