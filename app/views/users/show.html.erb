@@ -12,7 +12,7 @@
     </section>
   </aside>
   <div class="span8">
-    <%= render 'follow_form' if signed_in? %>
+    <%= render 'users/follow_form' if signed_in? %>
     <h3>Microposts </h3>
     <% if current_user?(@user) %>
       <%= render 'shared/micropost_form' %>

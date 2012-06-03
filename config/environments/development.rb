@@ -37,4 +37,6 @@ Boblog::Application.configure do
 
   #ImageMagick must be installed and Paperclip must have access to it
   Paperclip.options[:command_path] = "/usr/bin/"
+
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end

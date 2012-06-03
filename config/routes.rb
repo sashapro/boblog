@@ -1,19 +1,27 @@
 Boblog::Application.routes.draw do
-  resources :users do
+  devise_for :users
+  devise_scope :user do
+    get '/signup' => 'devise/registrations#new'
+    get '/signin' => 'devise/sessions#new'
+    get '/signout' => 'devise/sessions#destroy'
+  end
+
+
+  resources :users, only: [:show, :index] do
     member do
       get :following, :followers
     end
   end
-  resources :sessions, only: [:new, :create, :destroy]
+  #resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
   resources :comments, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
 
   root to: 'static_pages#home'
 
-  match '/signup',  to: 'users#new'
-  match '/signin',  to: 'sessions#new'
-  match '/signout', to: 'sessions#destroy'
+  #match '/signup',  to: 'users#new'
+  #match '/signin',  to: 'sessions#new'
+  #match '/signout', to: 'sessions#destroy'
 
   match '/help', to: 'static_pages#help'
 

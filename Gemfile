@@ -12,6 +12,7 @@ gem "paperclip", "~> 3.0"
 gem 'mysql2'
 gem 'mongrel'
 gem 'execjs'
+gem 'devise'
 
 group :development, :test do
 

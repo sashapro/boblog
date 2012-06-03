@@ -13,5 +13,7 @@
         <%= render 'comments/comments', :comments => micropost.comments %>
       </ol>
   <% end %>
-  <%= render 'comments/form', :micropost => micropost %>
+      <ol class="comments">
+        <%= render 'comments/form', :micropost => micropost %>
+      </ol>
 </li>
