@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
   #before_filter :correct_user,   only: [:edit, :update]
-  before_filter :admin_user,     only: :destroy
+  #before_filter :admin_user,     only: :destroy
+  load_and_authorize_resource
 
   def index
     @users = User.paginate page: params[:page], order: 'created_at desc',

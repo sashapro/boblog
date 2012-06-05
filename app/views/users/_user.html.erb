@@ -1,7 +1,7 @@
 <li>
   <%= image_tag user.avatar.url(:thumb), id: "avatar"%>
   <%= link_to user.name, user %>
-  <% if current_user.admin? && !current_user?(user) %>
-      | <%= link_to "delete", user, method: :delete, confirm: "You sure?" %>
+  <%  if can? :destroy, user && !current_user?(user) %>
+      | <%= link_to "delete", user, :method => :delete, confirm: "You sure?" %>
   <% end %>
 </li>

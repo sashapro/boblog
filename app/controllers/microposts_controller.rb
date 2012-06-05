@@ -1,6 +1,7 @@
 class MicropostsController < ApplicationController
   before_filter :authenticate_user!
-  before_filter :correct_user,   only: :destroy
+  #before_filter :correct_user,   only: :destroy
+  load_and_authorize_resource
 
   def create
     @micropost = current_user.microposts.build(params[:micropost])

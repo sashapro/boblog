@@ -13,6 +13,7 @@ gem 'mysql2'
 gem 'mongrel'
 gem 'execjs'
 gem 'devise'
+gem "cancan"
 
 group :development, :test do
 

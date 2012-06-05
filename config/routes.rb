@@ -7,7 +7,7 @@ Boblog::Application.routes.draw do
   end
 
 
-  resources :users, only: [:show, :index] do
+  resources :users, only: [:show, :index, :destroy] do
     member do
       get :following, :followers
     end
