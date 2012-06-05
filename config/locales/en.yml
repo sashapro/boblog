@@ -2,4 +2,32 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  comments:
+  layouts:
+  microposts:
+
+  shared:
+    _user_info:
+      my_profile: "view my profile"
+      micropost: "micropost"
+
+    _stats:
+          following: "following"
+          followers: "followers"
+
+    _micropost_form:
+      place_holder: "Compose new micropost..."
+
+
+  static_pages:
+    home:
+      feed: "Micropost Feed"
+      title: "Welcome to the BoBlog"
+      description: " This is the home page for the
+                        Ruby on Rails
+                        BoBlog."
+      sign_up: "Sign up now!"
+
+  users:
+
+  post: "Post"
