@@ -4,16 +4,16 @@
       <%= link_to "Boblog", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Help", help_path %></li>
+          <li><%= link_to t("layouts._header.home"), root_path %></li>
+          <li><%= link_to t("layouts._header.help"), help_path %></li>
           <% if signed_in? %>
-              <li><%= link_to "Users", users_path %></li>
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", edit_user_registration_path %></li>
-              <li><%= link_to "Sign out", signout_path %> </li>
+              <li><%= link_to t("layouts._header.users"), users_path %></li>
+              <li><%= link_to t("layouts._header.profile"), current_user %></li>
+              <li><%= link_to t("layouts._header.settings"), edit_user_registration_path %></li>
+              <li><%= link_to t("layouts._header.sign_out"), signout_path %> </li>
 
           <% else %>
-              <li><%= link_to "Sign in", signin_path %></li>
+              <li><%= link_to t("layouts._header.sign_in"), signin_path %></li>
           <% end %>
         </ul>
       </nav>

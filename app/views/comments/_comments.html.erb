@@ -12,7 +12,7 @@
   </span>
   <% if can? :destroy, comment %>
       <%= link_to "delete", comment, method:  :delete,
-                  confirm: "You sure?",
+                  confirm: t("confirm"),
                   title:   comment.content %>
   <% end %>
 </li>

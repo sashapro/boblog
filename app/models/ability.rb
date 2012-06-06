@@ -7,13 +7,10 @@ class Ability
        user ||= User.new # guest user (not logged in)
        if user.admin?
          can :manage, :all
+         cannot :destroy, User, admin: true#, id: user.id,
        else
          can :read, :all
-         can :create, [Comment, Micropost]
-         can :destroy, [Comment, Micropost] do |comment, micropost|
-           comment.try(:user) == user
-           micropost.try(:user) == user
-         end
+         can [:create, :destroy], [Comment, Micropost], user_id: user.id
        end
     #
     # The first argument to `can` is the action you are giving the user permission to do.

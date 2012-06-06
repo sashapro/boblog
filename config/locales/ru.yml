@@ -1,7 +1,20 @@
 ru:
   comments:
+    _form:
+      placeholder: "Прокоментируйте..."
+
   layouts:
-  microposts:
+    _header:
+      home: "Новости"
+      help: "Помощь"
+      users: "Пользователи"
+      profile: "Моя страница"
+      settings: "Профиль"
+      sign_out: "Выйти"
+      sign_in: "Войти"
+
+  microposts: ""
+
   shared:
     _user_info:
       my_profile: "мой профиль"
@@ -12,7 +25,7 @@ ru:
       followers: "Читатели"
 
     _micropost_form:
-      place_holder: "Написать сообщение..."
+      place_holder: "Написать новое сообщение..."
 
   static_pages:
     home:
@@ -20,11 +33,21 @@ ru:
       title: "Добро пожаловать в BoBlog"
       description: "Это домашняя страничка BoBlog-га на Ruby on Rails"
       sign_up: "Зарегестрируйся сейчас!"
+
   users:
+    show:
+      microposts: "Стена"
+    index:
+      all_users: "Пользователи"
+
+  unauthorized:
+    manage:
+      all: "Not allowed to %{action} %{subject}."
 
   post: "Отправить"
   posted: "Отправлено"
   ago: "назад"
+  confirm: "Вы уверены?"
 
   date:
     abbr_day_names:

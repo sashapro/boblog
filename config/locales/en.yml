@@ -31,3 +31,7 @@ en:
   users:
 
   post: "Post"
+
+  unauthorized:
+    manage:
+      all: "Not allowed to %{action} %{subject}."
