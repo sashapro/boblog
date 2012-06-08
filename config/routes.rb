@@ -5,14 +5,11 @@ Boblog::Application.routes.draw do
     get '/signin' => 'devise/sessions#new'
     get '/signout' => 'devise/sessions#destroy'
   end
-
-
   resources :users, only: [:show, :index, :destroy] do
     member do
       get :following, :followers
     end
   end
-  #resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
   resources :comments, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]

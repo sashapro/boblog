@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
   before_filter :authenticate_user!
-  #before_filter :correct_user,   only: :destroy
   load_and_authorize_resource
 
   def create
@@ -20,11 +19,5 @@ class CommentsController < ApplicationController
   def destroy
     @comment.destroy
     redirect_to :back
-  end
-
-  private
-  def correct_user
-    @comment = current_user.comments.find_by_id(params[:id])
-    redirect_to root_path if @comment.nil?
   end
 end

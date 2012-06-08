@@ -2,6 +2,7 @@
     <%= render 'shared/error_messages', object: f.object %>
     <div class="field">
       <%= f.text_area :content, placeholder: t("shared._micropost_form.place_holder"), size:"24x2" %>
+      <%= f.file_field :image, size: 1, class: "btn btn-large btn-primary" %>
     </div>
     <%= f.submit t("post"), class: "btn btn-large btn-primary" %>
 <% end %>

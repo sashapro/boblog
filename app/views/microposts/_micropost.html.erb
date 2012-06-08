@@ -10,6 +10,9 @@
                   confirm: t("confirm"),
                   title: micropost.content %>
   <% end %>
+  <% if micropost.image? %>
+    <span class="content"><%= image_tag micropost.image.url(:medium), id: "image" %></span>
+  <% end %>
   <% if micropost.comments.any? %>
       <ol class="comments">
         <%= render 'comments/comments', :comments => micropost.comments %>
