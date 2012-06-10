@@ -7,7 +7,7 @@ class MicropostsController < ApplicationController
 
     if @micropost.save
       flash[:success] = "Micropost created!"
-      redirect_to current_user
+      redirect_to :back
     else
       @feed_items = [] ######
       @microposts = current_user.microposts.paginate page: params[:page], per_page: 10

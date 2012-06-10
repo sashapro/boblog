@@ -1,0 +1,18 @@
+<h3><%= @user.name %></h3>
+<span>
+  <%=@user.admin %>
+</span>
+<div >
+  <div class="row-fluid">
+    <div class="span3"><%=t(".birthday")%>:</div>
+    <div class="span4"><%=time_tag @user.born_on %> </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span3"><%=t(".sex")%>:</div>
+    <div class="span4"><%=sex(@user)%> </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span3"><%=t(".about")%>: </div>
+    <div class="span4"><%=@user.admin %> </div>
+  </div>
+</div>

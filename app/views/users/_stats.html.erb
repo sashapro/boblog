@@ -1,0 +1,25 @@
+<% @user ||= current_user %>
+
+  <section class="stats">
+    <div>
+      <a href="<%= following_user_path(@user) %>">
+        <%= t "shared._stats.following" %>
+        <strong id="following" class="stat">
+          <%= @user.followed_users.count %>
+        </strong>
+      </a>
+      <%= render 'users/sidebar', :users => @user.followed_users %>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div>
+      <a href="<%= followers_user_path(@user) %>">
+        <%= t "shared._stats.followers" %>
+        <strong id="followers" class="stat">
+          <%= @user.followers.count %>
+        </strong>
+      </a>
+      <%= render 'users/sidebar', :users => @user.followers %>
+    </div>
+  </section>

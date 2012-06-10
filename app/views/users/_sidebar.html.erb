@@ -1,0 +1,8 @@
+<ul class="users">
+  <% for user in users.take(5) %>
+      <li>
+        <%= image_tag user.avatar.url(:thumb), id: "avatar", size:"50x50"%>
+        <%= link_to user.name, user %>
+      </li>
+  <% end %>
+</ul>

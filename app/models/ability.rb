@@ -9,7 +9,7 @@ class Ability
          can :manage, :all
          cannot :destroy, User, admin: true#, id: user.id,
        else
-         can :read, :all
+         can [:read, :following, :followers], :all
          can [:create, :destroy], [Comment, Micropost], user_id: user.id
        end
     #

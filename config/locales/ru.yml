@@ -39,6 +39,11 @@ ru:
       microposts: "Стена"
     index:
       all_users: "Пользователи"
+    info:
+      status: "Статус"
+      birthday: "День рождения"
+      sex: "Пол"
+      about: "О себе"
 
   unauthorized:
     manage:

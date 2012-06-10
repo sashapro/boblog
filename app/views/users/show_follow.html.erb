@@ -8,14 +8,7 @@
       <span><b>Microposts:</b> <%= @user.microposts.count %></span>
     </section>
     <section>
-      <%= render 'shared/stats' %>
-      <% if @users.any? %>
-          <div class="user_avatars">
-            <% @users.each do |user| %>
-                <%= image_tag user.avatar.url(:thumb), id: "avatar", size:"40x50" %>
-            <% end %>
-          </div>
-      <% end %>
+      <%= render 'stats' %>
     </section>
   </aside>
   <div class="span8">
