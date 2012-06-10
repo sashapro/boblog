@@ -1,5 +1,8 @@
 <li>
   <span class="content"><%= micropost.content %></span>
+  <% if micropost.image? %>
+      <span class="content"><%= image_tag micropost.image.url(:medium), id: "image" %></span>
+  <% end %>
   <span class="timestamp">
     <%= t "posted" %>
     <%= time_ago_in_words(micropost.created_at) %>
@@ -9,9 +12,6 @@
       <%= link_to "delete", micropost, method: :delete,
                   confirm: t("confirm"),
                   title: micropost.content %>
-  <% end %>
-  <% if micropost.image? %>
-    <span class="content"><%= image_tag micropost.image.url(:medium), id: "image" %></span>
   <% end %>
   <% if micropost.comments.any? %>
       <ol class="comments">

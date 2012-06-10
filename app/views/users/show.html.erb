@@ -1,6 +1,6 @@
 <% provide(:title, @user.name) %>
 <div class="row">
-  <aside class="span4">
+  <aside class="span3">
     <section>
       <h1>
         <%= image_tag @user.avatar.url(:thumb), id: "avatar"%>
@@ -18,9 +18,7 @@
       <%= render 'shared/micropost_form' %>
     <% end %>
     <% if @user.microposts.any? %>
-
         <ol class="microposts">
-
           <%= render @microposts %>
         </ol>
         <%= will_paginate @microposts %>

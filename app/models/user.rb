@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
 
   has_attached_file :avatar,
                     :default_url => "/assets/missing_:style.jpg" ,
-                    :styles => { :medium => "300x300>", :thumb => "100x100>" }
+                    :styles => { :medium => "200x400>", :thumb => "100x100>" }
 
   validates_attachment :avatar,
                        :content_type => { :content_type => ['image/jpeg', 'image/png', 'image/jpg'] },
