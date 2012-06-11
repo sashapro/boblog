@@ -11,16 +11,25 @@ User.create(name: 'Admin',
             email: 'admin@ad.com',
             admin: true,
             password: 'password',
-            password_confirmation: 'password' )
+            password_confirmation: 'password',
+            born_on: '2005-05-25',
+            status: 'Ukrainian GO GO GO!!!',
+            about: 'Love football' )
 
 User.create(name: 'Sasha',
             email: 'sasha@ad.com',
             admin: true,
             password: '123456',
-            password_confirmation: '123456' )
+            password_confirmation: '123456',
+            born_on: '2005-05-25',
+            status: 'Ukrainian GO GO GO!!!',
+            about: 'Love football' )
 
 User.create(name: 'Petja',
             email: 'Petja@ad.com',
             admin: true,
             password: '123456',
-            password_confirmation: '123456' )
+            password_confirmation: '123456',
+            born_on: '2005-05-25',
+            status: 'Ukrainian GO GO GO!!!',
+            about: 'Love football' )

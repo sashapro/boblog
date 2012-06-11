@@ -9,7 +9,8 @@ class User < ActiveRecord::Base
   #attr_accessible :email, :password, :password_confirmation, :remember_me
 
   attr_accessible :name, :email, :password, :password_confirmation,
-                  :remember_me, :avatar, :born_on, :female
+                  :remember_me, :avatar, :born_on, :female, :status,
+                  :about, :admin, :nik, :surname
 
   has_many :microposts, dependent: :destroy
   has_many :comments, dependent: :destroy

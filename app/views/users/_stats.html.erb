@@ -8,8 +8,8 @@
           <%= @user.followed_users.count %>
         </strong>
       </a>
-      <%= render 'users/sidebar', :users => @user.followed_users %>
     </div>
+    <%= render 'users/sidebar', :users => @user.followed_users %>
   </section>
 
   <section class="stats">
@@ -20,6 +20,6 @@
           <%= @user.followers.count %>
         </strong>
       </a>
-      <%= render 'users/sidebar', :users => @user.followers %>
     </div>
+    <%= render 'users/sidebar', :users => @user.followers %>
   </section>

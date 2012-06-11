@@ -1,18 +1,19 @@
-<h2>Sign up</h2>
+<h2><%=t("devise.registrations.new.sign") %></h2>
+<span><%=t("devise.registrations.new.sign_p")%></span>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-    <%= f.label :avatar %>
+    <%= f.label t("devise.registrations.new.avatar") %>
     <%= f.file_field :avatar %>
 
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.label t("devise.registrations.new.nik") %>
+    <%= f.text_field :nik %>
 
-    <%= f.label :email %>
+    <%= f.label t("devise.registrations.new.email") %>
     <%= f.text_field :email %>
 
-    <%= f.label :born_on %>
+    <%= f.label t("devise.registrations.new.born_on") %>
     <%= f.date_select :born_on, start_year: 1900 %>
 
     <%= label_tag(:female, "Sex:") %>
@@ -21,13 +22,13 @@
     <%= radio_button_tag(:female, false) %>
     <%= label_tag(:female, "Male") %>
 
-    <%= f.label :password %>
+    <%= f.label t("devise.registrations.new.password") %>
     <%= f.password_field :password %>
 
-  <%= f.label :password_confirmation %>
+  <%= f.label t("devise.registrations.new.password_confirmation") %>
   <%= f.password_field :password_confirmation %>
 
-  <div><%= f.submit "Sign up" %></div>
+  <div><%= f.submit t("devise.registrations.new.sign_up") %></div>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>

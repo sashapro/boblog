@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120602135020) do
+ActiveRecord::Schema.define(:version => 20120611081929) do
 
   create_table "comments", :force => true do |t|
     t.integer  "micropost_id"
@@ -68,9 +68,14 @@ ActiveRecord::Schema.define(:version => 20120602135020) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "status"
+    t.string   "about"
+    t.string   "nik"
+    t.string   "surname"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["nik"], :name => "index_users_on_nik", :unique => true
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 

@@ -1,6 +1,6 @@
 module UsersHelper
 
   def sex(user)
-    user.female = true ? "Woman" : "Man"
+    user.female = 1 ? "Woman" : "Man"
   end
 end
