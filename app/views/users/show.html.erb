@@ -3,20 +3,20 @@
   <aside class="span3">
     <section>
       <h1>
-        <%= image_tag @user.avatar.url(:thumb), id: "avatar"%>
+        <%= image_tag @user.avatar.url(:medium), id: "avatar"%>
       </h1>
     </section>
+      <%= render 'users/follow_form' if signed_in? %>
     <section>
-      <%= render 'stats' %>
+      <%= render 'users/stats' %>
     </section>
   </aside>
   <div class="span8">
-    <div class="span8">
-      <%= render 'users/follow_form' if signed_in? %>
+    <div class="info">
       <%= render 'users/info' %>
     </div>
-    <div class="span8">
-      <div class="navbar-inner">
+    <div class="wall">
+      <div class="nav-border">
         <h3><%= t ".microposts" %></h3>
       </div>
       <% if current_user == @user %>

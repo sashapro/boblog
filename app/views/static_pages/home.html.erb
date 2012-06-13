@@ -1,14 +1,13 @@
 <% if user_signed_in? %>
     <div class="row">
-      <aside class="span4">
+      <aside class="span3">
         <section>
-          <%= render 'shared/user_info' %>
+          <h1>
+            <%= image_tag current_user.avatar.url(:medium), id: "avatar"%>
+          </h1>
         </section>
         <section>
           <%= render 'users/stats' %>
-        </section>
-        <section>
-          <%= render 'shared/micropost_form' %>
         </section>
       </aside>
       <div class="span8">

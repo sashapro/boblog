@@ -1,7 +1,7 @@
 <% @user ||= current_user %>
 
   <section class="stats">
-    <div>
+    <div class="nav-border">
       <a href="<%= following_user_path(@user) %>">
         <%= t "shared._stats.following" %>
         <strong id="following" class="stat">
@@ -13,7 +13,7 @@
   </section>
 
   <section class="stats">
-    <div>
+    <div class="nav-border">
       <a href="<%= followers_user_path(@user) %>">
         <%= t "shared._stats.followers" %>
         <strong id="followers" class="stat">

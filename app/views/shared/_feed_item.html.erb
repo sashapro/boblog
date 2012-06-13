@@ -12,5 +12,9 @@
     <%= time_ago_in_words(feed_item.created_at) %>
     <%= t "ago" %>.
   </span>
-
+  <% if feed_item.comments.any? %>
+      <ol class="comments">
+        <%= render 'comments/comments', :comments => feed_item.comments %>
+      </ol>
+  <% end %>
 </li>

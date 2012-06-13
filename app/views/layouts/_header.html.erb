@@ -1,14 +1,10 @@
 <header class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
+  <div class="navbar-inner" style=" box-shadow: none">
     <div class="container">
       <%= link_to "Boblog", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= nav_link t("layouts._header.home"), root_path %></li>
-          <li><%= nav_link t("layouts._header.help"), help_path %></li>
           <% if signed_in? %>
-              <%= nav_link t("layouts._header.users"), users_path %>
-              <%= nav_link t("layouts._header.profile"), current_user %>
               <%= nav_link t("layouts._header.settings"), edit_user_registration_path %>
               <%= nav_link t("layouts._header.sign_out"), signout_path %>
 
@@ -20,7 +16,7 @@
     </div>
   </div>
   <% if signed_in? %>
-    <div class="container">
+    <div class="inner">
       <ul class="nav nav-tabs">
         <%= nav_link t("layouts._header.profile"), current_user %>
         <%= nav_link t("layouts._header.users"), users_path %>

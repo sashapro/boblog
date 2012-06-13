@@ -21,9 +21,10 @@ class User < ActiveRecord::Base
            dependent: :destroy
   has_many :followers, through: :reverse_relationships, source: :follower
 
+  validates :nik, :born_on, presence: true
   has_attached_file :avatar,
                     :default_url => "/assets/missing_:style.jpg" ,
-                    :styles => { :medium => "200x400>", :thumb => "100x100>" }
+                    :styles => { :medium => ["220x300#"], :thumb => ["100x100#"] }
 
   validates_attachment :avatar,
                        :content_type => { :content_type => ['image/jpeg', 'image/png', 'image/jpg'] },

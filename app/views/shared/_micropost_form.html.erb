@@ -1,11 +1,14 @@
 <%= form_for(Micropost.new) do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
     <div class="field">
-      <%= f.text_area :content, placeholder: t("shared._micropost_form.place_holder"), size:"24x2" %>
-      <input type="button" value="Browse.."
+      <%= f.text_area :content,
+                      placeholder: t("shared._micropost_form.place_holder"),
+                      size:"24x2" %>
+      <input type="button" value="<%= t("shared._micropost_form.browse") %>"
+             class="btn btn-large btn-primary pull-right"
              onclick="javascript:document.getElementById('micropost_image').click();">
       <%= f.file_field :image, size: "1", class: "btn btn-large btn-primary", style:'visibility: hidden;'  %>
 
     </div>
-    <%= f.submit t("post"), class: "btn btn-large btn-primary" %>
+    <%= f.submit t("post"), class: "btn btn-large btn-primary", style:"margin-top: -105px;" %>
 <% end %>

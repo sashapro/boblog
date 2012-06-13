@@ -10,7 +10,7 @@ class Micropost < ActiveRecord::Base
   default_scope order: 'microposts.created_at DESC'
 
   has_attached_file :image,
-                    :styles => { :medium => "460x320>" }
+                    :styles => { :medium => "640x450>" }
 
   validates_attachment :image,
                        :content_type => { :content_type => ['image/jpeg', 'image/png', 'image/jpg'] },

@@ -13,7 +13,7 @@ ru:
       sign_out: "Выйти"
       sign_in: "Войти"
 
-  microposts: ""
+  microposts: "Сообщение создано!"
 
   shared:
     _user_info:
@@ -26,6 +26,7 @@ ru:
 
     _micropost_form:
       place_holder: "Написать новое сообщение..."
+      browse: "Прикрепить"
 
   static_pages:
     home:
@@ -43,6 +44,8 @@ ru:
       status: "Статус"
       birthday: "День рождения"
       sex: "Пол"
+      woman: "Женский"
+      man: "Мужской"
       about: "О себе"
     user:
       delete: "удалить"

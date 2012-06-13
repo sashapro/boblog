@@ -1,8 +1,12 @@
-<h3><%= @user.name %></h3>
-<span>
-  <%=@user.status %>
-</span>
-<div >
+<div>
+  <h3><%= @user.name %></h3>
+    <span>
+      <%=@user.status %>
+    </span>
+</div>
+<div class="line_x">
+</div>
+<div>
   <div class="row-fluid">
     <div class="span3"><%=t(".birthday")%>:</div>
     <div class="span4"><%=time_tag @user.born_on %> </div>
@@ -16,3 +20,4 @@
     <div class="span4"><%=@user.about %> </div>
   </div>
 </div>
+
