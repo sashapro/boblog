@@ -79,6 +79,7 @@ ru:
         remember_me: "Запомнить меня"
         password: "Пароль"
         sign: "Войти"
+        forgot_your_password: "Забыли свой пароль?"
 
   unauthorized:
     manage:

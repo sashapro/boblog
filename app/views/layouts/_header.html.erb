@@ -5,6 +5,7 @@
       <nav>
         <ul class="nav pull-right">
           <% if signed_in? %>
+              <%= nav_link current_user.name, current_user %>
               <%= nav_link t("layouts._header.settings"), edit_user_registration_path %>
               <%= nav_link t("layouts._header.sign_out"), signout_path %>
 

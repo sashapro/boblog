@@ -1,11 +1,10 @@
 <%= provide(:title, @title) %>
 <div class="row">
-  <aside class="span4">
+  <aside class="span3">
     <section>
-      <%= image_tag @user.avatar.url(:thumb), id: "avatar" %>
-      <h1><%= @user.name %></h1>
-      <span><%= link_to "view my profile", @user %></span>
-      <span><b>Microposts:</b> <%= @user.microposts.count %></span>
+      <h1>
+        <%= image_tag current_user.avatar.url(:medium), id: "avatar"%>
+      </h1>
     </section>
     <section>
       <%= render 'stats' %>
